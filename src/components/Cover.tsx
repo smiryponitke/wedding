@@ -4,8 +4,8 @@ import Image from 'next/image'
 
 export default function Cover() {
   return (
-    <section className="min-h-screen bg-[#f2e8e4] flex flex-col items-center justify-center px-4 py-16 relative overflow-hidden">
-      <p className="text-xs tracking-[0.4em] text-[#8b6e6e] mb-8 md:mb-12 uppercase">
+    <section className="min-h-screen bg-wedding-pink flex flex-col items-center justify-center px-4 py-16 relative overflow-hidden">
+      <p className="text-xs tracking-[0.4em] text-amber-900 mb-8 md:mb-12 uppercase">
         Wedding Day
       </p>
 
@@ -40,16 +40,16 @@ export default function Cover() {
         </div>
 
         {/* Groom photo */}
-        <div className="polaroid rotate-[2deg]">
-          <div className="relative w-44 h-44 md:w-56 md:h-56 bg-gray-200">
+        <div className="polaroid rotate-2">
+          <div className="relative w-48 h-56 md:w-56 md:h-64 bg-gray-300">
             <Image
-              src="/images/groom-placeholder.jpg"
-              alt="Егор в детстве"
+              src="/images/egorHi.jpg"
+              alt="Егор"
               fill
               className="object-cover"
             />
           </div>
-          <p className="polaroid-caption mt-3 text-xs leading-relaxed text-[#4a3030] font-light italic px-2">
+          <p className="polaroid-caption mt-4 text-xs leading-relaxed text-amber-900 font-light italic px-3">
             — им буду я 🤍
           </p>
         </div>
