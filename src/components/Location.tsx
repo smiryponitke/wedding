@@ -24,7 +24,7 @@ export default function Location() {
 
         <div className="location-image">
           <div className="location-image-inner">
-            <img src="/images/malinki.png" alt="Усадьба Малинки" />
+            <img src="/images/malinki.jpg" alt="Усадьба Малинки" />
           </div>
         </div>
       </div>
