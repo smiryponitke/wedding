@@ -9,7 +9,7 @@ export default function Cover() {
       </p>
 
       {/* Photos + Date row */}
-      <div className="flex flex-row items-center justify-center mb-10 space-x-8 md:space-x-12">
+      <div className="cover-photos">
         {/* Bride photo */}
         <div className="polaroid -rotate-3">
           <img

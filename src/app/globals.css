@@ -36,3 +36,18 @@ body {
   word-wrap: break-word;
   overflow-wrap: break-word;
 }
+
+.cover-photos {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  margin-bottom: 40px;
+}
+
+@media (min-width: 768px) {
+  .cover-photos {
+    gap: 48px;
+  }
+}
