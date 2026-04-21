@@ -1,11 +1,23 @@
 /* src/app/globals.css */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
 :root {
   --font-serif: 'Cormorant Garamond', Georgia, serif;
   --font-sans: 'Jost', system-ui, sans-serif;
+
+  --color-pink: #f2e8e4;
+  --color-cream: #f5f4f2;
+  --color-dark: #1a1a1a;
+  --color-text: #333333;
+  --color-muted: #666666;
+  --color-border: #e0e0e0;
+  --color-amber: #78350f;
+  --color-white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html {
@@ -14,27 +26,62 @@ html {
 
 body {
   font-family: var(--font-sans);
-  background: #ffffff;
-  color: #1a1a1a;
+  background: var(--color-white);
+  color: var(--color-dark);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
 }
 
-.font-serif {
-  font-family: var(--font-serif);
+img {
+  max-width: 100%;
+  display: block;
 }
 
-.polaroid {
-  background: white;
-  padding: 12px 12px 12px 12px;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
-  display: inline-block;
-  width: max-content;
+button {
+  font-family: inherit;
+  cursor: pointer;
+  background: none;
+  border: none;
 }
 
-.polaroid-caption {
-  font-family: 'Segoe UI', cursive, sans-serif;
-  max-width: 140px;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
+input,
+button {
+  font-family: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* =========================================
+   COVER SECTION
+   ========================================= */
+
+.cover {
+  min-height: 100vh;
+  background: var(--color-pink);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 64px 16px;
+  position: relative;
+  overflow: hidden;
+}
+
+.cover-label {
+  font-size: 12px;
+  letter-spacing: 0.4em;
+  color: var(--color-amber);
+  margin-bottom: 24px;
+  text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  .cover-label {
+    margin-bottom: 32px;
+  }
 }
 
 .cover-photos {
@@ -53,16 +100,71 @@ body {
   }
 }
 
+.polaroid {
+  background: white;
+  padding: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  display: inline-block;
+  width: max-content;
+}
+
+.polaroid-rotate-left {
+  transform: rotate(-3deg);
+}
+
+.polaroid-rotate-right {
+  transform: rotate(2deg);
+}
+
+.polaroid img {
+  width: 112px;
+  height: 112px;
+  object-fit: cover;
+}
+
+@media (min-width: 768px) {
+  .polaroid img {
+    width: 128px;
+    height: 128px;
+  }
+}
+
+.polaroid-tall img {
+  width: 112px;
+  height: 144px;
+}
+
+@media (min-width: 768px) {
+  .polaroid-tall img {
+    width: 128px;
+    height: 160px;
+  }
+}
+
+.polaroid-caption {
+  font-family: 'Segoe UI', cursive, sans-serif;
+  max-width: 140px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  margin-top: 8px;
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--color-amber);
+  font-weight: 300;
+  font-style: italic;
+  padding: 0 8px;
+}
+
 .cover-date {
   text-align: center;
   font-family: var(--font-serif);
-  color: #7a5c5c;
+  color: var(--color-amber);
   line-height: 1;
   padding: 0 8px;
 }
 
 .cover-date-day {
-  font-size: 56px;
+  font-size: 70px;
   font-weight: 300;
   letter-spacing: -0.02em;
 }
@@ -76,11 +178,713 @@ body {
 
 @media (min-width: 768px) {
   .cover-date-day {
-    font-size: 80px;
+    font-size: 96px;
   }
 
   .cover-date-month,
   .cover-date-year {
     font-size: 64px;
   }
+}
+
+.cover-names {
+  font-family: var(--font-serif);
+  font-size: 24px;
+  letter-spacing: 0.15em;
+  color: var(--color-amber);
+  font-weight: 300;
+}
+
+@media (min-width: 768px) {
+  .cover-names {
+    font-size: 40px;
+  }
+}
+
+/* =========================================
+   DATE SECTION (Calendar)
+   ========================================= */
+
+.date-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-white);
+  padding: 64px 16px;
+}
+
+.date-card {
+  background: white;
+  border-radius: 24px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  padding: 40px;
+  max-width: 640px;
+  width: 100%;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .date-card {
+    padding: 64px;
+  }
+}
+
+.date-title {
+  font-family: var(--font-serif);
+  font-size: 36px;
+  letter-spacing: 0.15em;
+  color: var(--color-dark);
+  margin-bottom: 40px;
+}
+
+@media (min-width: 768px) {
+  .date-title {
+    font-size: 48px;
+  }
+}
+
+.date-month-label {
+  font-size: 14px;
+  letter-spacing: 0.35em;
+  color: var(--color-muted);
+  margin-bottom: 32px;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+.date-calendar {
+  margin-bottom: 48px;
+  background: #fafafa;
+  border-radius: 16px;
+  padding: 32px;
+}
+
+.date-calendar-header,
+.date-calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+}
+
+.date-calendar-header {
+  margin-bottom: 12px;
+}
+
+.date-calendar-day-name {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-muted);
+  text-align: center;
+  padding: 8px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.date-calendar-cell {
+  font-size: 16px;
+  text-align: center;
+  padding: 12px 0;
+  border-radius: 12px;
+  font-weight: 300;
+  transition: all 0.15s;
+  color: var(--color-text);
+}
+
+.date-calendar-cell-empty {
+  background: transparent;
+}
+
+.date-calendar-cell-highlight {
+  background: var(--color-dark);
+  color: white;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.date-calendar-cell:not(.date-calendar-cell-highlight):not(.date-calendar-cell-empty):hover {
+  background: #eeeeee;
+}
+
+.date-message {
+  font-size: 16px;
+  color: var(--color-muted);
+  line-height: 1.6;
+  margin-bottom: 40px;
+  max-width: 420px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.date-message strong {
+  font-weight: 500;
+  color: var(--color-dark);
+}
+
+.date-display {
+  font-family: var(--font-serif);
+  font-size: 30px;
+  letter-spacing: 0.15em;
+  color: var(--color-dark);
+}
+
+/* =========================================
+   LOCATION SECTION
+   ========================================= */
+
+.location-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: var(--color-white);
+  padding: 64px 16px;
+}
+
+.location-container {
+  max-width: 1024px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+}
+
+@media (min-width: 768px) {
+  .location-container {
+    flex-direction: row;
+  }
+}
+
+.location-text {
+  flex: 1;
+}
+
+.location-title {
+  font-family: var(--font-serif);
+  font-size: 36px;
+  letter-spacing: 0.15em;
+  color: var(--color-dark);
+  margin-bottom: 32px;
+}
+
+@media (min-width: 768px) {
+  .location-title {
+    font-size: 48px;
+  }
+}
+
+.location-name {
+  font-size: 24px;
+  font-weight: 300;
+  color: var(--color-dark);
+  margin-bottom: 12px;
+}
+
+.location-address {
+  color: var(--color-muted);
+  font-size: 16px;
+  margin-bottom: 24px;
+}
+
+.location-gathering {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 18px;
+  color: var(--color-text);
+  margin-bottom: 32px;
+}
+
+.location-btn {
+  display: inline-block;
+  border: 2px solid var(--color-dark);
+  border-radius: 9999px;
+  padding: 16px 32px;
+  font-size: 12px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--color-dark);
+  transition: all 0.3s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.location-btn:hover {
+  background: var(--color-dark);
+  color: white;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.location-image {
+  flex: 1;
+  width: 100%;
+}
+
+.location-image-inner {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.location-image-inner img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* =========================================
+   TIMELINE SECTION
+   ========================================= */
+
+.timeline-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-cream);
+  padding: 64px 16px;
+}
+
+.timeline-container {
+  max-width: 640px;
+  width: 100%;
+  text-align: center;
+}
+
+.timeline-title {
+  font-family: var(--font-serif);
+  font-size: 48px;
+  letter-spacing: 0.2em;
+  color: var(--color-dark);
+  margin-bottom: 80px;
+}
+
+@media (min-width: 768px) {
+  .timeline-title {
+    font-size: 60px;
+  }
+}
+
+.timeline-list {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+
+.timeline-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.timeline-icon {
+  font-size: 48px;
+}
+
+.timeline-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.timeline-time {
+  font-size: 24px;
+  letter-spacing: 0.15em;
+  font-weight: 300;
+  color: var(--color-dark);
+}
+
+@media (min-width: 768px) {
+  .timeline-time {
+    font-size: 30px;
+  }
+}
+
+.timeline-label {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-muted);
+}
+
+@media (min-width: 768px) {
+  .timeline-label {
+    font-size: 16px;
+  }
+}
+
+.timeline-divider {
+  width: 4px;
+  height: 40px;
+  background: var(--color-border);
+  border-radius: 9999px;
+  margin-top: 16px;
+}
+
+/* =========================================
+   DRESS CODE SECTION
+   ========================================= */
+
+.dresscode-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-white);
+  padding: 64px 16px;
+}
+
+.dresscode-container {
+  max-width: 672px;
+  width: 100%;
+  text-align: center;
+}
+
+.dresscode-title {
+  font-family: var(--font-serif);
+  font-size: 36px;
+  letter-spacing: 0.15em;
+  color: var(--color-dark);
+  margin-bottom: 40px;
+}
+
+@media (min-width: 768px) {
+  .dresscode-title {
+    font-size: 48px;
+  }
+}
+
+.dresscode-text {
+  font-size: 16px;
+  color: var(--color-muted);
+  line-height: 1.6;
+  margin-bottom: 56px;
+  max-width: 512px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.dresscode-colors {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 56px;
+}
+
+.dresscode-color {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.dresscode-swatch {
+  width: 96px;
+  height: 96px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.2s;
+}
+
+.dresscode-swatch:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.dresscode-label {
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--color-muted);
+}
+
+.dresscode-divider {
+  width: 4px;
+  height: 80px;
+  background: var(--color-border);
+  border-radius: 9999px;
+  margin: 0 auto;
+}
+
+/* =========================================
+   RSVP FORM
+   ========================================= */
+
+.rsvp-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-cream);
+  padding: 64px 16px;
+}
+
+.rsvp-container {
+  max-width: 672px;
+  width: 100%;
+}
+
+.rsvp-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.rsvp-title {
+  font-family: var(--font-serif);
+  font-size: 36px;
+  letter-spacing: 0.15em;
+  color: var(--color-dark);
+  margin-bottom: 24px;
+}
+
+@media (min-width: 768px) {
+  .rsvp-title {
+    font-size: 48px;
+  }
+}
+
+.rsvp-subtitle {
+  font-size: 16px;
+  color: var(--color-muted);
+  margin-bottom: 8px;
+}
+
+.rsvp-deadline {
+  font-family: var(--font-serif);
+  font-size: 24px;
+  color: var(--color-dark);
+}
+
+.rsvp-form {
+  background: white;
+  border-radius: 24px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+@media (min-width: 768px) {
+  .rsvp-form {
+    padding: 48px;
+  }
+}
+
+.rsvp-field label {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-muted);
+  margin-bottom: 12px;
+  letter-spacing: 0.025em;
+  text-transform: uppercase;
+}
+
+.rsvp-input {
+  width: 100%;
+  border: 2px solid var(--color-border);
+  border-radius: 16px;
+  padding: 16px 24px;
+  font-size: 16px;
+  color: var(--color-dark);
+  outline: none;
+  transition: all 0.2s;
+}
+
+.rsvp-input::placeholder {
+  color: #9ca3af;
+}
+
+.rsvp-input:focus {
+  border-color: var(--color-dark);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.rsvp-options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.rsvp-option {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  cursor: pointer;
+  padding: 12px;
+  border-radius: 12px;
+  transition: background 0.15s;
+}
+
+.rsvp-option:hover {
+  background: #fafafa;
+}
+
+.rsvp-option input[type='radio'],
+.rsvp-option input[type='checkbox'] {
+  width: 20px;
+  height: 20px;
+  accent-color: var(--color-dark);
+  cursor: pointer;
+}
+
+.rsvp-option-label {
+  font-size: 16px;
+  font-weight: 300;
+  color: var(--color-text);
+}
+
+.rsvp-drinks-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.rsvp-drinks-grid .rsvp-option-label {
+  font-size: 14px;
+}
+
+.rsvp-error {
+  background: #fef2f2;
+  border: 2px solid #fecaca;
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+}
+
+.rsvp-error p {
+  color: #dc2626;
+  font-size: 14px;
+}
+
+.rsvp-submit-wrap {
+  display: flex;
+  justify-content: center;
+  padding-top: 16px;
+}
+
+.rsvp-submit {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2px solid var(--color-dark);
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--color-dark);
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rsvp-submit:hover:not(:disabled) {
+  background: var(--color-dark);
+  color: white;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.rsvp-submit:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.rsvp-success {
+  text-align: center;
+}
+
+.rsvp-success-title {
+  font-family: var(--font-serif);
+  font-size: 36px;
+  color: var(--color-dark);
+  margin-bottom: 24px;
+}
+
+.rsvp-success-text {
+  color: var(--color-muted);
+  font-size: 16px;
+}
+
+/* =========================================
+   CONTACTS SECTION
+   ========================================= */
+
+.contacts-section {
+  padding: 96px 16px;
+  background: var(--color-white);
+}
+
+.contacts-container {
+  max-width: 768px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contacts-title {
+  font-family: var(--font-serif);
+  font-size: 36px;
+  letter-spacing: 0.15em;
+  color: var(--color-dark);
+  margin-bottom: 64px;
+}
+
+@media (min-width: 768px) {
+  .contacts-title {
+    font-size: 48px;
+  }
+}
+
+.contacts-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 64px;
+}
+
+@media (min-width: 768px) {
+  .contacts-list {
+    flex-direction: row;
+  }
+}
+
+.contact {
+  text-align: center;
+}
+
+.contact-name {
+  font-family: var(--font-serif);
+  font-size: 24px;
+  color: var(--color-dark);
+  margin-bottom: 16px;
+}
+
+.contact-phone,
+.contact-telegram {
+  font-size: 16px;
+  color: var(--color-muted);
+  font-weight: 300;
+  margin-bottom: 8px;
+}
+
+.contact-telegram strong {
+  font-weight: 500;
+}
+
+.contacts-footer {
+  margin-top: 80px;
+  padding-top: 32px;
+  border-top: 2px solid var(--color-border);
+}
+
+.contacts-footer-text {
+  font-size: 12px;
+  letter-spacing: 0.35em;
+  color: var(--color-muted);
+  text-transform: uppercase;
+  font-weight: 300;
 }

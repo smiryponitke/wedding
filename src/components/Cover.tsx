@@ -3,26 +3,17 @@ import { config } from '@/config'
 
 export default function Cover() {
   return (
-    <section className="min-h-screen bg-wedding-pink flex flex-col items-center justify-center px-4 py-16 relative overflow-hidden">
-      <p className="text-xs tracking-[0.4em] text-amber-900 mb-6 md:mb-8 uppercase">
-        Wedding Day
-      </p>
+    <section className="cover">
+      <p className="cover-label">Wedding Day</p>
 
-      {/* Photos + Date row */}
       <div className="cover-photos">
-        {/* Bride photo */}
-        <div className="polaroid -rotate-3">
-          <img
-            src="/images/vika.jpg"
-            alt="Вика"
-            className="w-28 h-28 md:w-32 md:h-32 object-cover"
-          />
-          <p className="polaroid-caption mt-2 text-xs leading-relaxed text-amber-900 font-light italic px-2">
+        <div className="polaroid polaroid-rotate-left">
+          <img src="/images/vika.jpg" alt="Вика" />
+          <p className="polaroid-caption">
             — интересно, кто будет моим мужем, когда я вырасту?
           </p>
         </div>
 
-        {/* Date */}
         <div className="cover-date">
           <div className="cover-date-day">
             {String(config.date.day).padStart(2, '0')}
@@ -35,21 +26,13 @@ export default function Cover() {
           </div>
         </div>
 
-        {/* Groom photo */}
-        <div className="polaroid rotate-2">
-          <img
-            src="/images/egor.jpg"
-            alt="Егор"
-            className="w-28 h-36 md:w-32 md:h-40 object-cover"
-          />
-          <p className="polaroid-caption mt-2 text-xs leading-relaxed text-amber-900 font-light italic px-2">
-            — им буду я 🤍
-          </p>
+        <div className="polaroid polaroid-tall polaroid-rotate-right">
+          <img src="/images/egor.jpg" alt="Егор" />
+          <p className="polaroid-caption">— им буду я 🤍</p>
         </div>
       </div>
 
-      {/* Names */}
-      <div className="font-serif text-2xl md:text-4xl tracking-[0.15em] text-amber-900 font-light">
+      <div className="cover-names">
         {config.names.groom} + {config.names.bride}
       </div>
     </section>
