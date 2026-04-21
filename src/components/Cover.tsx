@@ -23,14 +23,14 @@ export default function Cover() {
         </div>
 
         {/* Date */}
-        <div className="text-center font-serif text-amber-900 leading-none px-2">
-          <div className="text-6xl md:text-7xl font-light tracking-tight">
+        <div className="cover-date">
+          <div className="cover-date-day">
             {String(config.date.day).padStart(2, '0')}
           </div>
-          <div className="text-5xl md:text-6xl font-light tracking-tight">
+          <div className="cover-date-month">
             {String(config.date.month).padStart(2, '0')}
           </div>
-          <div className="text-5xl md:text-6xl font-light tracking-tight">
+          <div className="cover-date-year">
             {String(config.date.year).slice(2)}
           </div>
         </div>

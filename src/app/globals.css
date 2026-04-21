@@ -52,3 +52,35 @@ body {
     gap: 48px;
   }
 }
+
+.cover-date {
+  text-align: center;
+  font-family: var(--font-serif);
+  color: #7a5c5c;
+  line-height: 1;
+  padding: 0 8px;
+}
+
+.cover-date-day {
+  font-size: 56px;
+  font-weight: 300;
+  letter-spacing: -0.02em;
+}
+
+.cover-date-month,
+.cover-date-year {
+  font-size: 48px;
+  font-weight: 300;
+  letter-spacing: -0.02em;
+}
+
+@media (min-width: 768px) {
+  .cover-date-day {
+    font-size: 80px;
+  }
+
+  .cover-date-month,
+  .cover-date-year {
+    font-size: 64px;
+  }
+}
