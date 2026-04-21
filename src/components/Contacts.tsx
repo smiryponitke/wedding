@@ -2,23 +2,25 @@ import { config } from '@/config'
 
 export default function Contacts() {
   return (
-    <section className="py-20 bg-white px-4">
-      <div className="max-w-xl mx-auto text-center">
-        <h2 className="font-serif text-3xl md:text-4xl tracking-[0.15em] text-[#1a1a1a] mb-12">
+    <section className="py-24 bg-white px-4">
+      <div className="max-w-3xl mx-auto text-center">
+        <h2 className="font-serif text-4xl md:text-5xl tracking-[0.15em] text-wedding-dark mb-16">
           КОНТАКТЫ
         </h2>
-        <div className="flex flex-col md:flex-row justify-center gap-12">
+        <div className="flex flex-col md:flex-row justify-center gap-16">
           {config.contacts.map(contact => (
             <div key={contact.name} className="text-center">
-              <p className="font-serif text-xl text-[#1a1a1a] mb-2">{contact.name}</p>
-              <p className="text-sm text-[#666] mb-1">{contact.phone}</p>
-              <p className="text-sm text-[#888]">Telegram: {contact.telegram}</p>
+              <p className="font-serif text-2xl text-wedding-dark mb-4">{contact.name}</p>
+              <p className="text-base text-wedding-muted mb-2 font-light">{contact.phone}</p>
+              <p className="text-base text-wedding-muted font-light">Telegram: <span className="font-medium">{contact.telegram}</span></p>
             </div>
           ))}
         </div>
-        <p className="mt-16 text-xs tracking-[0.3em] text-[#aaa] uppercase">
-          Ждём вас · {config.date.display}
-        </p>
+        <div className="mt-20 pt-8 border-t-2 border-wedding-border">
+          <p className="text-xs tracking-[0.35em] text-wedding-muted uppercase font-light">
+            Ждём вас · {config.date.display}
+          </p>
+        </div>
       </div>
     </section>
   )

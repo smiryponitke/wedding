@@ -22,31 +22,31 @@ export default function DateSection() {
 
   return (
     <section className="min-h-screen flex items-center justify-center bg-white px-4 py-16">
-      <div className="bg-white rounded-3xl shadow-lg p-8 md:p-14 max-w-lg w-full text-center">
-        <h2 className="font-serif text-3xl md:text-4xl tracking-[0.15em] text-[#1a1a1a] mb-8">
+      <div className="bg-white rounded-3xl shadow-2xl p-10 md:p-16 max-w-2xl w-full text-center">
+        <h2 className="font-serif text-4xl md:text-5xl tracking-[0.15em] text-wedding-dark mb-10">
           МЫ ЖДЁМ ВАС
         </h2>
 
-        <p className="text-sm tracking-[0.3em] text-[#666] mb-4 uppercase">
+        <p className="text-sm tracking-[0.35em] text-wedding-muted mb-8 uppercase font-light">
           {MONTHS_RU[month - 1]}
         </p>
 
-        <div className="mb-6">
-          <div className="grid grid-cols-7 gap-1 mb-2">
+        <div className="mb-12 bg-gray-50 rounded-2xl p-8">
+          <div className="grid grid-cols-7 gap-2 mb-3">
             {DAYS.map(d => (
-              <div key={d} className="text-xs text-[#999] text-center py-1">{d}</div>
+              <div key={d} className="text-xs font-semibold text-wedding-muted text-center py-2 uppercase tracking-wider">{d}</div>
             ))}
           </div>
-          <div className="grid grid-cols-7 gap-1">
+          <div className="grid grid-cols-7 gap-2">
             {cells.map((d, i) => (
               <div
                 key={i}
-                className={`text-sm text-center py-2 rounded-full ${
+                className={`text-base text-center py-3 rounded-xl font-light transition-all ${
                   d === day
-                    ? 'border border-[#1a1a1a] text-[#1a1a1a] font-medium'
+                    ? 'bg-wedding-dark text-white font-semibold shadow-md'
                     : d === null
-                    ? ''
-                    : 'text-[#333]'
+                    ? 'bg-transparent'
+                    : 'text-wedding-text hover:bg-gray-200'
                 }`}
               >
                 {d ?? ''}
@@ -55,12 +55,12 @@ export default function DateSection() {
           </div>
         </div>
 
-        <p className="text-sm text-[#555] leading-relaxed mb-6">
+        <p className="text-base text-wedding-muted leading-relaxed mb-10 max-w-md mx-auto">
           Не пропустите важное событие этого лета —<br />
-          день нашей свадьбы!
+          <span className="font-medium text-wedding-dark">день нашей свадьбы!</span>
         </p>
 
-        <p className="font-serif text-2xl tracking-[0.2em] text-[#1a1a1a]">
+        <p className="font-serif text-3xl tracking-[0.15em] text-wedding-dark">
           {displaySlash}
         </p>
       </div>

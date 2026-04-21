@@ -6,28 +6,28 @@ export default function DressCode() {
 
   return (
     <section className="min-h-screen flex items-center justify-center bg-white px-4 py-16">
-      <div className="max-w-xl w-full text-center">
-        <h2 className="font-serif text-4xl md:text-5xl tracking-[0.15em] text-[#1a1a1a] mb-8">
+      <div className="max-w-2xl w-full text-center">
+        <h2 className="font-serif text-4xl md:text-5xl tracking-[0.15em] text-wedding-dark mb-10">
           ДРЕСС-КОД
         </h2>
 
-        <p className="text-sm text-[#555] leading-relaxed mb-12 max-w-sm mx-auto">
+        <p className="text-base text-wedding-muted leading-relaxed mb-14 max-w-lg mx-auto">
           {text}
         </p>
 
-        <div className="flex justify-center gap-4 mb-12">
+        <div className="flex flex-wrap justify-center gap-6 mb-14">
           {colors.map((color) => (
-            <div key={color.hex} className="flex flex-col items-center gap-2">
+            <div key={color.hex} className="flex flex-col items-center gap-3">
               <div
-                className="w-16 h-16 rounded-sm shadow-sm"
-                style={{ backgroundColor: color.hex }}
+                className="w-24 h-24 rounded-lg shadow-md hover:shadow-lg transition-shadow"
+                style={{ backgroundColor: color.hex, border: '1px solid rgba(0,0,0,0.1)' }}
               />
-              <span className="text-xs text-[#888]">{color.label}</span>
+              <span className="text-sm font-light text-wedding-muted">{color.label}</span>
             </div>
           ))}
         </div>
 
-        <div className="w-px h-16 bg-[#ccc] mx-auto" />
+        <div className="w-1 h-20 bg-wedding-border rounded-full mx-auto" />
       </div>
     </section>
   )
