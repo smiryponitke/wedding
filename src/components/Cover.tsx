@@ -19,6 +19,8 @@ export default function Cover() {
               alt="Вика"
               fill
               className="object-cover"
+              priority
+              sizes="(max-width: 768px) 192px, 224px"
             />
           </div>
           <p className="polaroid-caption mt-4 text-xs leading-relaxed text-amber-900 font-light italic px-3">
@@ -47,6 +49,8 @@ export default function Cover() {
               alt="Егор"
               fill
               className="object-cover"
+              priority
+              sizes="(max-width: 768px) 192px, 224px"
             />
           </div>
           <p className="polaroid-caption mt-4 text-xs leading-relaxed text-amber-900 font-light italic px-3">
