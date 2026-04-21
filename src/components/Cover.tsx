@@ -9,7 +9,7 @@ export default function Cover() {
       </p>
 
       {/* Photos + Date row */}
-      <div className="flex flex-row items-center justify-center gap-3 md:gap-6 mb-10 flex-wrap">
+      <div className="flex flex-row items-center justify-center gap-8 md:gap-12 mb-10 flex-wrap">
         {/* Bride photo */}
         <div className="polaroid -rotate-3">
           <img
@@ -24,13 +24,13 @@ export default function Cover() {
 
         {/* Date */}
         <div className="text-center font-serif text-amber-900 leading-none px-2">
-          <div className="text-4xl md:text-5xl font-light tracking-tight">
+          <div className="text-5xl md:text-6xl font-light tracking-tight">
             {String(config.date.day).padStart(2, '0')}
           </div>
-          <div className="text-3xl md:text-4xl font-light tracking-tight">
+          <div className="text-4xl md:text-5xl font-light tracking-tight">
             {String(config.date.month).padStart(2, '0')}
           </div>
-          <div className="text-3xl md:text-4xl font-light tracking-tight">
+          <div className="text-4xl md:text-5xl font-light tracking-tight">
             {String(config.date.year).slice(2)}
           </div>
         </div>
