@@ -1,5 +1,19 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## Setup
+
+1. Install dependencies:
+
+```bash
+npm install
+```
+
+2. Configure environment:
+   - Copy `.env.example` to `.env.local`
+   - Add your Telegram bot credentials to `.env.local`:
+     - `TELEGRAM_BOT_TOKEN` - your Telegram bot token
+     - `TELEGRAM_CHAT_ID` - your Telegram chat ID
+
 ## Getting Started
 
 First, run the development server:
