@@ -53,4 +53,17 @@ describe('POST /api/rsvp', () => {
     const res = await POST(req)
     expect(res.status).toBe(400)
   })
+
+  it('sends message to multiple chat IDs when comma-separated', async () => {
+    process.env.TELEGRAM_CHAT_ID = '12345,67890'
+    const req = new NextRequest('http://localhost/api/rsvp', {
+      method: 'POST',
+      body: JSON.stringify({ name: 'Иван', attending: 'yes' }),
+    })
+    const res = await POST(req)
+    expect(res.status).toBe(200)
+    expect(global.fetch).toHaveBeenCalledTimes(2)
+    expect((global.fetch as jest.Mock).mock.calls[0][1].body).toContain('"chat_id":"12345"')
+    expect((global.fetch as jest.Mock).mock.calls[1][1].body).toContain('"chat_id":"67890"')
+  })
 })

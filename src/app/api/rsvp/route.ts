@@ -10,7 +10,10 @@ export async function POST(req: NextRequest) {
   }
 
   const token = process.env.TELEGRAM_BOT_TOKEN
-  const chatId = process.env.TELEGRAM_CHAT_ID
+  const chatIds = (process.env.TELEGRAM_CHAT_ID || '')
+    .split(',')
+    .map(id => id.trim())
+    .filter(Boolean)
 
   const attendingText = attending === 'yes' ? '✅ Придёт' : '❌ Не сможет'
   const drinksText = drinks?.length ? drinks.join(', ') : 'не указано'
@@ -25,15 +28,19 @@ export async function POST(req: NextRequest) {
     `🥂 *Напитки:* ${drinksText}`,
   ].join('\n')
 
-  await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      chat_id: chatId,
-      text: message,
-      parse_mode: 'Markdown',
-    }),
-  })
+  await Promise.all(
+    chatIds.map(chatId =>
+      fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          chat_id: chatId,
+          text: message,
+          parse_mode: 'Markdown',
+        }),
+      })
+    )
+  )
 
   return NextResponse.json({ ok: true })
 }
