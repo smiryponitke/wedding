@@ -1,6 +1,5 @@
 // src/components/Cover.tsx
 import { config } from '@/config'
-import Image from 'next/image'
 
 export default function Cover() {
   return (
@@ -10,57 +9,47 @@ export default function Cover() {
       </p>
 
       {/* Photos + Date row */}
-      <div className="flex flex-col md:flex-row items-center gap-8 md:gap-16 mb-10">
+      <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12 mb-16">
         {/* Bride photo */}
-        <div className="polaroid -rotate-3">
-          <div className="relative w-48 h-56 md:w-56 md:h-64 bg-gray-300">
-            <Image
-              src="/images/vikaHi.jpg"
-              alt="Вика"
-              fill
-              className="object-cover"
-              priority
-              sizes="(max-width: 768px) 192px, 224px"
-            />
-          </div>
-          <p className="polaroid-caption mt-4 text-xs leading-relaxed text-amber-900 font-light italic px-3">
+        <div className="polaroid -rotate-3 shadow-xl">
+          <img
+            src="/images/vikaHi.jpg"
+            alt="Вика"
+            className="w-64 h-80 md:w-72 md:h-96 object-cover"
+          />
+          <p className="polaroid-caption mt-4 text-sm leading-relaxed text-amber-900 font-light italic px-4">
             — интересно, кто будет моим мужем, когда я вырасту?
           </p>
         </div>
 
         {/* Date */}
-        <div className="text-center font-serif text-amber-900 leading-none">
-          <div className="text-6xl md:text-8xl font-light">
+        <div className="text-center font-serif text-amber-900 leading-none px-4">
+          <div className="text-7xl md:text-9xl font-light tracking-tight">
             {String(config.date.day).padStart(2, '0')}
           </div>
-          <div className="text-6xl md:text-8xl font-light">
+          <div className="text-6xl md:text-8xl font-light tracking-tight">
             {String(config.date.month).padStart(2, '0')}
           </div>
-          <div className="text-6xl md:text-8xl font-light">
+          <div className="text-6xl md:text-8xl font-light tracking-tight">
             {String(config.date.year).slice(2)}
           </div>
         </div>
 
         {/* Groom photo */}
-        <div className="polaroid rotate-2">
-          <div className="relative w-48 h-56 md:w-56 md:h-64 bg-gray-300">
-            <Image
-              src="/images/egorHi.jpg"
-              alt="Егор"
-              fill
-              className="object-cover"
-              priority
-              sizes="(max-width: 768px) 192px, 224px"
-            />
-          </div>
-          <p className="polaroid-caption mt-4 text-xs leading-relaxed text-amber-900 font-light italic px-3">
+        <div className="polaroid rotate-2 shadow-xl">
+          <img
+            src="/images/egorHi.jpg"
+            alt="Егор"
+            className="w-64 h-80 md:w-72 md:h-96 object-cover"
+          />
+          <p className="polaroid-caption mt-4 text-sm leading-relaxed text-amber-900 font-light italic px-4">
             — им буду я 🤍
           </p>
         </div>
       </div>
 
       {/* Names */}
-      <div className="font-serif text-5xl md:text-7xl tracking-[0.2em] text-amber-900">
+      <div className="font-serif text-6xl md:text-8xl tracking-[0.15em] text-amber-900 font-light">
         {config.names.groom} + {config.names.bride}
       </div>
     </section>
