@@ -143,7 +143,7 @@ a {
 
 .polaroid-caption {
   font-family: 'Segoe UI', cursive, sans-serif;
-  max-width: 140px;
+  max-width: 128px;
   word-wrap: break-word;
   overflow-wrap: break-word;
   margin-top: 8px;
@@ -674,7 +674,7 @@ a {
   }
 }
 
-.rsvp-field label {
+.rsvp-field > label {
   display: block;
   font-size: 14px;
   font-weight: 500;
