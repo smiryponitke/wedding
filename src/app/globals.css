@@ -44,6 +44,7 @@ body {
   justify-content: center;
   gap: 32px;
   margin-bottom: 40px;
+  flex-wrap: nowrap;
 }
 
 @media (min-width: 768px) {
