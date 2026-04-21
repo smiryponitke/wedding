@@ -13,9 +13,9 @@ export default function Cover() {
         {/* Bride photo */}
         <div className="polaroid -rotate-3">
           <img
-            src="/images/vikaHi.jpg"
+            src="/images/vika.jpg"
             alt="Вика"
-            className="w-28 h-36 md:w-32 md:h-40 object-cover"
+            className="w-28 h-28 md:w-32 md:h-32 object-cover"
           />
           <p className="polaroid-caption mt-2 text-xs leading-relaxed text-amber-900 font-light italic px-2">
             — интересно, кто будет моим мужем, когда я вырасту?
@@ -38,7 +38,7 @@ export default function Cover() {
         {/* Groom photo */}
         <div className="polaroid rotate-2">
           <img
-            src="/images/egorHi.jpg"
+            src="/images/egor.jpg"
             alt="Егор"
             className="w-28 h-36 md:w-32 md:h-40 object-cover"
           />
