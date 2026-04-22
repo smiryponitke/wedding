@@ -20,6 +20,7 @@ export async function POST(req: NextRequest) {
   const partnerText = partner ? `\n👫 Спутник/спутница: ${partner}` : ''
 
   const message = [
+    '',
     '🎊 *Новая анкета гостя!*',
     '',
     `👤 *Имя:* ${name}`,
