@@ -60,7 +60,7 @@ a {
 
 .cover {
   min-height: 100vh;
-  background: var(--color-pink);
+  background: var(--color-white);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -117,37 +117,37 @@ a {
 }
 
 .polaroid img {
-  width: 112px;
-  height: 112px;
+  width: 160px;
+  height: 160px;
   object-fit: cover;
 }
 
 @media (min-width: 768px) {
   .polaroid img {
-    width: 128px;
-    height: 128px;
+    width: 200px;
+    height: 200px;
   }
 }
 
 .polaroid-tall img {
-  width: 112px;
-  height: 144px;
+  width: 160px;
+  height: 208px;
 }
 
 @media (min-width: 768px) {
   .polaroid-tall img {
-    width: 128px;
-    height: 160px;
+    width: 200px;
+    height: 260px;
   }
 }
 
 .polaroid-caption {
   font-family: 'Segoe UI', cursive, sans-serif;
-  max-width: 128px;
+  max-width: 180px;
   word-wrap: break-word;
   overflow-wrap: break-word;
-  margin-top: 8px;
-  font-size: 12px;
+  margin-top: 12px;
+  font-size: 13px;
   line-height: 1.6;
   color: var(--color-amber);
   font-weight: 300;
@@ -624,7 +624,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--color-cream);
+  background: var(--color-white);
   padding: 64px 16px;
 }
 
