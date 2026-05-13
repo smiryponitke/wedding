@@ -476,24 +476,32 @@ a {
 }
 
 .location-container {
-  max-width: 1280px;
+  max-width: 1400px;
   margin: 0 auto;
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch;
   gap: 64px;
 }
 
 @media (min-width: 768px) {
   .location-container {
     flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 96px;
   }
 }
 
-.location-text {
+.location-text-col {
   flex: 1;
   min-width: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-bottom: 60px;
 }
 
 .location-title {
@@ -568,15 +576,19 @@ a {
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
 }
 
-.location-btn-wrap {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
+.location-btn {
+  margin-top: 24px;
+  margin-left: 40px;
+}
+
+@media (min-width: 768px) {
+  .location-btn {
+    margin-left: 100px;
+  }
 }
 
 .location-image {
-  flex: 2;
+  flex: 1.4;
   width: 100%;
 }
 
@@ -595,7 +607,26 @@ a {
 
 @media (min-width: 768px) {
   .location-image-inner img {
-    min-height: 560px;
+    min-height: 640px;
+  }
+}
+
+/* Decorative arrow from name to button */
+.location-arrow {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .location-arrow {
+    display: block;
+    position: absolute;
+    top: 220px;
+    left: 0;
+    width: 160px;
+    height: 220px;
+    color: var(--color-dark);
+    opacity: 0.5;
+    pointer-events: none;
   }
 }
 
