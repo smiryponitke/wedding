@@ -280,7 +280,7 @@ a {
 .cover-date {
   text-align: center;
   font-family: var(--font-serif);
-  color: var(--color-black);
+  color: var(--color-muted);
   line-height: 1;
   padding: 0 8px;
 }
@@ -435,13 +435,19 @@ a {
 }
 
 .date-message {
-  font-size: 16px;
+  font-size: 24px;
   color: var(--color-muted);
-  line-height: 1.6;
+  line-height: 1.5;
   margin-bottom: 40px;
-  max-width: 420px;
+  max-width: 540px;
   margin-left: auto;
   margin-right: auto;
+}
+
+@media (min-width: 768px) {
+  .date-message {
+    font-size: 28px;
+  }
 }
 
 .date-message strong {
@@ -469,13 +475,13 @@ a {
 }
 
 .location-container {
-  max-width: 1024px;
+  max-width: 1280px;
   margin: 0 auto;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 48px;
+  gap: 64px;
 }
 
 @media (min-width: 768px) {
@@ -503,24 +509,41 @@ a {
 }
 
 .location-name {
-  font-size: 24px;
+  font-size: 32px;
   font-weight: 300;
   color: var(--color-dark);
-  margin-bottom: 12px;
+  margin-bottom: 16px;
+}
+
+@media (min-width: 768px) {
+  .location-name {
+    font-size: 40px;
+  }
 }
 
 .location-address {
   color: var(--color-muted);
-  font-size: 16px;
-  margin-bottom: 24px;
+  font-size: 22px;
+  margin-bottom: 32px;
+}
+
+@media (min-width: 768px) {
+  .location-address {
+    font-size: 26px;
+  }
 }
 
 .location-gathering {
   font-family: var(--font-serif);
-  font-style: italic;
-  font-size: 18px;
+  font-size: 26px;
   color: var(--color-text);
-  margin-bottom: 32px;
+  margin-bottom: 40px;
+}
+
+@media (min-width: 768px) {
+  .location-gathering {
+    font-size: 30px;
+  }
 }
 
 .location-btn {
@@ -689,13 +712,19 @@ a {
 }
 
 .dresscode-text {
-  font-size: 16px;
+  font-size: 24px;
   color: var(--color-muted);
-  line-height: 1.6;
+  line-height: 1.5;
   margin-bottom: 56px;
-  max-width: 512px;
+  max-width: 640px;
   margin-left: auto;
   margin-right: auto;
+}
+
+@media (min-width: 768px) {
+  .dresscode-text {
+    font-size: 28px;
+  }
 }
 
 .dresscode-colors {
