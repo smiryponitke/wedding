@@ -578,13 +578,6 @@ a {
 
 .location-btn {
   margin-top: 24px;
-  margin-left: 40px;
-}
-
-@media (min-width: 768px) {
-  .location-btn {
-    margin-left: 100px;
-  }
 }
 
 .location-image {
@@ -611,24 +604,6 @@ a {
   }
 }
 
-/* Decorative arrow from name to button */
-.location-arrow {
-  display: none;
-}
-
-@media (min-width: 768px) {
-  .location-arrow {
-    display: block;
-    position: absolute;
-    top: 220px;
-    left: 0;
-    width: 160px;
-    height: 220px;
-    color: var(--color-dark);
-    opacity: 0.5;
-    pointer-events: none;
-  }
-}
 
 /* =========================================
    TIMELINE SECTION
