@@ -2,8 +2,8 @@
 
 export const config = {
   names: {
-    groom: 'ЕГОР',
-    bride: 'ВИКА',
+    groom: 'Егор',
+    bride: 'Виктория',
   },
   date: {
     day: 29,

@@ -10,9 +10,14 @@ import '@fontsource/playfair-display/700.css'
 import '@fontsource/playfair-display/400-italic.css'
 import '@fontsource/playfair-display/cyrillic-400.css'
 import '@fontsource/playfair-display/cyrillic-700.css'
+import '@fontsource/caveat/cyrillic-400.css'
+import '@fontsource/caveat/cyrillic-500.css'
+import '@fontsource/caveat/cyrillic-600.css'
+import '@fontsource/caveat/cyrillic-700.css'
+import '@fontsource/marck-script/cyrillic-400.css'
 
 export const metadata: Metadata = {
-  title: 'Егор & Вика — 29.08.2026',
+  title: 'Егор & Виктория — 29.08.2026',
   description: 'Приглашаем вас разделить с нами этот особенный день',
 }
 

@@ -8,7 +8,7 @@ export default function Cover() {
 
       <div className="cover-photos">
         <div className="polaroid polaroid-rotate-left">
-          <img src="/images/vika.jpg" alt="Вика" />
+          <img src="/images/vikaka.jpg" alt="Вика" />
           <p className="polaroid-caption">
             — интересно, кто будет моим мужем, когда я вырасту?
           </p>
@@ -27,13 +27,13 @@ export default function Cover() {
         </div>
 
         <div className="polaroid polaroid-tall polaroid-rotate-right">
-          <img src="/images/egor.jpg" alt="Егор" />
+          <img src="/images/egog.jpg" alt="Егор" />
           <p className="polaroid-caption">— им буду я 🤍</p>
         </div>
       </div>
 
       <div className="cover-names">
-        {config.names.groom} + {config.names.bride}
+        {config.names.groom} & {config.names.bride}
       </div>
     </section>
   )

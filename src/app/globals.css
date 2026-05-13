@@ -1,8 +1,9 @@
 /* src/app/globals.css */
 
 :root {
-  --font-serif: 'Cormorant Garamond', Georgia, serif;
-  --font-sans: 'Jost', system-ui, sans-serif;
+  --font-serif: 'Marck Script', 'Caveat', cursive;
+  --font-sans: 'Caveat', cursive;
+  --font-script: 'Marck Script', cursive;
 
   --color-pink: #f2e8e4;
   --color-cream: #f5f4f2;
@@ -11,7 +12,7 @@
   --color-muted: #666666;
   --color-border: #e0e0e0;
   --color-amber: #78350f;
-  --color-white: #ffffff;
+  --color-white: #f4f3ee;
 }
 
 * {
@@ -28,7 +29,8 @@ body {
   font-family: var(--font-sans);
   background: var(--color-white);
   color: var(--color-dark);
-  line-height: 1.5;
+  line-height: 1.4;
+  font-size: 20px;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -177,7 +179,7 @@ a {
   left: 50%;
   transform: translateX(-50%);
   font-family: var(--font-sans);
-  font-size: 14px;
+  font-size: 32px;
   letter-spacing: 0.4em;
   color: var(--color-black);
   text-transform: uppercase;
@@ -187,7 +189,7 @@ a {
 @media (min-width: 768px) {
   .cover-label {
     top: 60px;
-    font-size: 16px;
+    font-size: 32px;
   }
 }
 
@@ -255,23 +257,22 @@ a {
 }
 
 .polaroid-caption {
-  font-family: 'Segoe UI', cursive, sans-serif;
+  font-family: var(--font-sans);
   max-width: 220px;
   word-wrap: break-word;
   overflow-wrap: break-word;
   margin-top: 16px;
-  font-size: 14px;
-  line-height: 1.6;
+  font-size: 20px;
+  line-height: 1.4;
   color: var(--color-dark);
-  font-weight: 300;
-  font-style: italic;
+  font-weight: 400;
   padding: 0 8px;
 }
 
 @media (min-width: 768px) {
   .polaroid-caption {
     max-width: 360px;
-    font-size: 16px;
+    font-size: 24px;
     margin-top: 20px;
   }
 }
@@ -309,19 +310,19 @@ a {
 }
 
 .cover-names {
-  font-family: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
-  font-size: 56px;
+  font-family: var(--font-script);
+  font-size: 72px;
   font-weight: 400;
   line-height: 1.1;
   text-align: center;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.02em;
   color: var(--color-dark);
 }
 
 @media (min-width: 768px) {
   .cover-names {
-    font-size: 56px;
-    line-height: 110px;
+    font-size: 120px;
+    line-height: 1.1;
   }
 }
 
