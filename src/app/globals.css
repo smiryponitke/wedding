@@ -96,22 +96,22 @@ a {
 @keyframes polaroidFadeLeft {
   from {
     opacity: 0;
-    transform: translateX(-30px) rotate(-8deg);
+    transform: translateX(-30px) translateY(-40px) rotate(-8deg);
   }
   to {
     opacity: 1;
-    transform: translateX(0) rotate(-8deg);
+    transform: translateX(0) translateY(-40px) rotate(-8deg);
   }
 }
 
 @keyframes polaroidFadeRight {
   from {
     opacity: 0;
-    transform: translateX(30px) rotate(7deg);
+    transform: translateX(30px) translateY(40px) rotate(7deg);
   }
   to {
     opacity: 1;
-    transform: translateX(0) rotate(7deg);
+    transform: translateX(0) translateY(40px) rotate(7deg);
   }
 }
 
@@ -180,14 +180,14 @@ a {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 32px;
+  gap: 64px;
   margin-bottom: 40px;
   flex-wrap: nowrap;
 }
 
 @media (min-width: 768px) {
   .cover-photos {
-    gap: 48px;
+    gap: 120px;
   }
 }
 
@@ -200,11 +200,11 @@ a {
 }
 
 .polaroid-rotate-left {
-  transform: rotate(-8deg);
+  transform: rotate(-8deg) translateY(-40px);
 }
 
 .polaroid-rotate-right {
-  transform: rotate(7deg);
+  transform: rotate(7deg) translateY(40px);
 }
 
 .polaroid img {
