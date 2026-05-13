@@ -11,7 +11,15 @@ export default function Contacts() {
               <p className="contact-name">{contact.name}</p>
               <p className="contact-phone">{contact.phone}</p>
               <p className="contact-telegram">
-                Telegram: <strong>{contact.telegram}</strong>
+                Telegram:{' '}
+                <a
+                  href={contact.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="contact-telegram-link"
+                >
+                  {contact.telegram}
+                </a>
               </p>
             </div>
           ))}

@@ -1,5 +1,7 @@
 // src/config.ts
 
+import { link } from "fs";
+
 export const config = {
   names: {
     groom: 'Егор',
@@ -56,7 +58,7 @@ export const config = {
     'Не пью алкоголь',
   ],
   contacts: [
-    { name: 'Егор', phone: '+375 (44) 540-53-63', telegram: '@viyoule' },
-    { name: 'Вика', phone: '+375 (29) 133-44-79', telegram: '@asewwlviki' },
+    { name: 'Егор', phone: '+375 (44) 540-53-63', telegram: '@viyoule', link: 'https://t.me/viyoule' },
+    { name: 'Вика', phone: '+375 (29) 133-44-79', telegram: '@asewwlviki', link: 'https://t.me/asewwlviki'},
   ],
 }
