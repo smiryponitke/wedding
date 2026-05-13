@@ -344,13 +344,13 @@ a {
 }
 
 .location-container {
-  max-width: 1280px;
+  max-width: 1024px;
   margin: 0 auto;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 64px;
+  gap: 48px;
 }
 
 @media (min-width: 768px) {
@@ -365,55 +365,37 @@ a {
 
 .location-title {
   font-family: var(--font-serif);
-  font-size: 56px;
+  font-size: 36px;
   letter-spacing: 0.15em;
   color: var(--color-dark);
-  margin-bottom: 40px;
-}
-
-@media (min-width: 768px) {
-  .location-title {
-    font-size: 72px;
-  }
-}
-
-.location-name {
-  font-size: 32px;
-  font-weight: 300;
-  color: var(--color-dark);
-  margin-bottom: 16px;
-}
-
-@media (min-width: 768px) {
-  .location-name {
-    font-size: 40px;
-  }
-}
-
-.location-address {
-  color: var(--color-muted);
-  font-size: 20px;
   margin-bottom: 32px;
 }
 
 @media (min-width: 768px) {
-  .location-address {
-    font-size: 22px;
+  .location-title {
+    font-size: 48px;
   }
+}
+
+.location-name {
+  font-size: 24px;
+  font-weight: 300;
+  color: var(--color-dark);
+  margin-bottom: 12px;
+}
+
+.location-address {
+  color: var(--color-muted);
+  font-size: 16px;
+  margin-bottom: 24px;
 }
 
 .location-gathering {
   font-family: var(--font-serif);
   font-style: italic;
-  font-size: 24px;
+  font-size: 18px;
   color: var(--color-text);
-  margin-bottom: 40px;
-}
-
-@media (min-width: 768px) {
-  .location-gathering {
-    font-size: 28px;
-  }
+  margin-bottom: 32px;
 }
 
 .location-btn {
