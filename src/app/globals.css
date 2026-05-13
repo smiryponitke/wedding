@@ -210,7 +210,10 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--color-white);
+  background-image: url('/images/bymajka2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   padding: 64px 16px;
 }
 
