@@ -12,6 +12,9 @@ export default function Location() {
           <h3 className="location-name">{name}</h3>
           <p className="location-address">{address}</p>
           <p className="location-gathering">* Сбор гостей — {gatheringTime}</p>
+        </div>
+
+        <div className="location-btn-wrap">
           <a
             href={mapsUrl}
             target="_blank"
