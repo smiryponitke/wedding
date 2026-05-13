@@ -1134,3 +1134,271 @@ a {
     font-size: 22px;
   }
 }
+
+/* =========================================
+   MOBILE OVERRIDES (< 768px)
+   ========================================= */
+
+@media (max-width: 767px) {
+  body {
+    font-size: 18px;
+  }
+
+  /* Cover */
+  .cover {
+    padding: 80px 12px 48px;
+  }
+  .cover-label {
+    top: 24px;
+    font-size: 28px;
+  }
+  .cover-photos {
+    gap: 12px;
+    margin-bottom: 32px;
+  }
+  .polaroid {
+    padding: 8px 8px 14px 8px;
+  }
+  .polaroid img,
+  .polaroid-tall img {
+    width: 96px;
+    height: 96px;
+  }
+  .polaroid-tall img {
+    height: 124px;
+  }
+  .polaroid-rotate-left {
+    transform: rotate(-6deg) translateY(-24px);
+  }
+  .polaroid-rotate-right {
+    transform: rotate(5deg) translateY(24px);
+  }
+  .polaroid-caption {
+    font-size: 15px;
+    max-width: 120px;
+    margin-top: 8px;
+  }
+  .cover-date {
+    padding: 0 4px;
+  }
+  .cover-date-day {
+    font-size: 44px;
+  }
+  .cover-date-month,
+  .cover-date-year {
+    font-size: 32px;
+  }
+  .cover-names {
+    font-size: 40px;
+    padding: 0 16px;
+  }
+
+  /* Date section */
+  .date-section {
+    padding: 48px 12px;
+  }
+  .date-card {
+    padding: 28px 20px;
+    border-radius: 18px;
+  }
+  .date-title {
+    font-size: 32px;
+    margin-bottom: 24px;
+  }
+  .date-month-label {
+    font-size: 12px;
+    margin-bottom: 20px;
+  }
+  .date-calendar {
+    padding: 16px;
+    margin-bottom: 32px;
+  }
+  .date-calendar-header,
+  .date-calendar-grid {
+    gap: 4px;
+  }
+  .date-calendar-day-name {
+    font-size: 11px;
+    padding: 4px 0;
+  }
+  .date-calendar-cell {
+    font-size: 14px;
+    padding: 8px 0;
+    border-radius: 8px;
+  }
+  .date-message {
+    font-size: 18px;
+    margin-bottom: 28px;
+  }
+  .date-display {
+    font-size: 24px;
+  }
+
+  /* Location */
+  .location-section {
+    padding: 48px 16px;
+  }
+  .location-container {
+    gap: 32px;
+  }
+  .location-title {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+  .location-name {
+    font-size: 26px;
+  }
+  .location-address {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  .location-gathering {
+    font-size: 22px;
+    margin-bottom: 24px;
+  }
+  .location-btn {
+    padding: 14px 24px;
+    font-size: 11px;
+    letter-spacing: 0.25em;
+  }
+  .location-image {
+    max-width: 100%;
+  }
+
+  /* Timeline */
+  .timeline-section {
+    padding: 48px 16px;
+  }
+  .timeline-title {
+    font-size: 36px;
+    margin-bottom: 48px;
+    letter-spacing: 0.08em;
+  }
+  .timeline-list {
+    gap: 40px;
+  }
+  .timeline-icon {
+    font-size: 36px;
+  }
+  .timeline-time {
+    font-size: 22px;
+  }
+  .timeline-label {
+    font-size: 13px;
+    letter-spacing: 0.15em;
+  }
+  .timeline-divider {
+    width: 3px;
+    height: 28px;
+  }
+
+  /* Dress code */
+  .dresscode-section {
+    padding: 48px 16px;
+  }
+  .dresscode-title {
+    font-size: 32px;
+    margin-bottom: 24px;
+  }
+  .dresscode-text {
+    font-size: 18px;
+    margin-bottom: 36px;
+  }
+  .dresscode-colors {
+    gap: 16px;
+    margin-bottom: 36px;
+  }
+  .dresscode-swatch {
+    width: 64px;
+    height: 64px;
+    border-radius: 6px;
+  }
+  .dresscode-label {
+    font-size: 12px;
+  }
+  .dresscode-divider {
+    height: 48px;
+  }
+
+  /* RSVP */
+  .rsvp-section {
+    padding: 48px 16px;
+  }
+  .rsvp-header {
+    margin-bottom: 32px;
+  }
+  .rsvp-title {
+    font-size: 32px;
+    margin-bottom: 16px;
+  }
+  .rsvp-subtitle {
+    font-size: 18px;
+  }
+  .rsvp-deadline {
+    font-size: 26px;
+  }
+  .rsvp-form {
+    padding: 24px 20px;
+    border-radius: 18px;
+    gap: 24px;
+  }
+  .rsvp-field > label {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  .rsvp-input {
+    padding: 14px 18px;
+    font-size: 18px;
+    border-radius: 12px;
+  }
+  .rsvp-option {
+    padding: 8px;
+    gap: 12px;
+  }
+  .rsvp-option-label {
+    font-size: 18px;
+  }
+  .rsvp-drinks-grid {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+  .rsvp-drinks-grid .rsvp-option-label {
+    font-size: 17px;
+  }
+  .rsvp-submit {
+    width: 96px;
+    height: 96px;
+    font-size: 11px;
+  }
+  .rsvp-success-title {
+    font-size: 30px;
+  }
+
+  /* Contacts */
+  .contacts-section {
+    padding: 64px 16px;
+  }
+  .contacts-title {
+    font-size: 32px;
+    margin-bottom: 40px;
+  }
+  .contacts-list {
+    gap: 40px;
+  }
+  .contact-name {
+    font-size: 28px;
+    margin-bottom: 12px;
+  }
+  .contact-phone,
+  .contact-telegram {
+    font-size: 18px;
+  }
+  .contacts-footer {
+    margin-top: 48px;
+    padding-top: 20px;
+  }
+  .contacts-footer-text {
+    font-size: 14px;
+    letter-spacing: 0.18em;
+  }
+}
