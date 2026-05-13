@@ -444,7 +444,10 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--color-cream);
+  background-image: url('/images/flower.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   padding: 64px 16px;
 }
 
