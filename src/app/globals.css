@@ -93,6 +93,17 @@ a {
   }
 }
 
+@keyframes coverLabelFadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
 @keyframes polaroidFadeLeft {
   from {
     opacity: 0;
@@ -116,7 +127,7 @@ a {
 }
 
 .cover-label {
-  animation: coverFadeIn 0.8s ease-out 0.1s both;
+  animation: coverLabelFadeIn 0.8s ease-out 0.1s both;
 }
 
 .cover-date {
@@ -162,16 +173,22 @@ a {
 }
 
 .cover-label {
-  font-size: 48px;
+  position: absolute;
+  top: 48px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--font-sans);
+  font-size: 14px;
   letter-spacing: 0.4em;
   color: var(--color-amber);
-  margin-bottom: 24px;
   text-transform: uppercase;
+  margin-bottom: 0;
 }
 
 @media (min-width: 768px) {
   .cover-label {
-    margin-bottom: 32px;
+    top: 60px;
+    font-size: 16px;
   }
 }
 
@@ -279,16 +296,19 @@ a {
 }
 
 .cover-names {
-  font-family: var(--font-serif);
-  font-size: 24px;
-  letter-spacing: 0.15em;
+  font-family: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+  font-size: 56px;
+  font-weight: 400;
+  line-height: 1.1;
+  text-align: center;
+  letter-spacing: 0.05em;
   color: var(--color-amber);
-  font-weight: 300;
 }
 
 @media (min-width: 768px) {
   .cover-names {
-    font-size: 40px;
+    font-size: 100px;
+    line-height: 110px;
   }
 }
 
