@@ -96,22 +96,22 @@ a {
 @keyframes polaroidFadeLeft {
   from {
     opacity: 0;
-    transform: translateX(-30px) rotate(-3deg);
+    transform: translateX(-30px) rotate(-8deg);
   }
   to {
     opacity: 1;
-    transform: translateX(0) rotate(-3deg);
+    transform: translateX(0) rotate(-8deg);
   }
 }
 
 @keyframes polaroidFadeRight {
   from {
     opacity: 0;
-    transform: translateX(30px) rotate(2deg);
+    transform: translateX(30px) rotate(7deg);
   }
   to {
     opacity: 1;
-    transform: translateX(0) rotate(2deg);
+    transform: translateX(0) rotate(7deg);
   }
 }
 
@@ -200,11 +200,11 @@ a {
 }
 
 .polaroid-rotate-left {
-  transform: rotate(-3deg);
+  transform: rotate(-8deg);
 }
 
 .polaroid-rotate-right {
-  transform: rotate(2deg);
+  transform: rotate(7deg);
 }
 
 .polaroid img {
