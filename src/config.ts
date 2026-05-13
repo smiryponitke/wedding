@@ -13,7 +13,7 @@ export const config = {
     displaySlash: '29 / 08 / 26',
   },
   rsvpDeadline: {
-    display: '29 / 04 / 26',
+    display: '29 / 08 / 26',
   },
   location: {
     name: 'Усадьба "Малинки"',

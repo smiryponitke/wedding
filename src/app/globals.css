@@ -345,7 +345,6 @@ a {
 .date-card {
   background: #ffffff;
   border-radius: 24px;
-  border: 2px solid var(--color-dark);
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
   padding: 40px;
   max-width: 640px;
@@ -360,16 +359,17 @@ a {
 }
 
 .date-title {
-  font-family: var(--font-serif);
-  font-size: 36px;
-  letter-spacing: 0.15em;
+  font-family: var(--font-sans);
+  font-size: 38px;
+  font-weight: 400;
+  letter-spacing: 0.08em;
   color: var(--color-dark);
   margin-bottom: 40px;
 }
 
 @media (min-width: 768px) {
   .date-title {
-    font-size: 48px;
+    font-size: 52px;
   }
 }
 
@@ -505,16 +505,17 @@ a {
 }
 
 .location-title {
-  font-family: var(--font-serif);
-  font-size: 36px;
-  letter-spacing: 0.15em;
+  font-family: var(--font-sans);
+  font-size: 38px;
+  font-weight: 400;
+  letter-spacing: 0.08em;
   color: var(--color-dark);
   margin-bottom: 32px;
 }
 
 @media (min-width: 768px) {
   .location-title {
-    font-size: 48px;
+    font-size: 52px;
   }
 }
 
@@ -628,16 +629,17 @@ a {
 }
 
 .timeline-title {
-  font-family: var(--font-serif);
-  font-size: 48px;
-  letter-spacing: 0.2em;
+  font-family: var(--font-sans);
+  font-size: 42px;
+  font-weight: 400;
+  letter-spacing: 0.1em;
   color: var(--color-dark);
   margin-bottom: 80px;
 }
 
 @media (min-width: 768px) {
   .timeline-title {
-    font-size: 60px;
+    font-size: 56px;
   }
 }
 
@@ -720,16 +722,17 @@ a {
 }
 
 .dresscode-title {
-  font-family: var(--font-serif);
-  font-size: 36px;
-  letter-spacing: 0.15em;
+  font-family: var(--font-sans);
+  font-size: 38px;
+  font-weight: 400;
+  letter-spacing: 0.08em;
   color: var(--color-dark);
   margin-bottom: 40px;
 }
 
 @media (min-width: 768px) {
   .dresscode-title {
-    font-size: 48px;
+    font-size: 52px;
   }
 }
 
@@ -815,16 +818,17 @@ a {
 }
 
 .rsvp-title {
-  font-family: var(--font-serif);
-  font-size: 36px;
-  letter-spacing: 0.15em;
+  font-family: var(--font-sans);
+  font-size: 38px;
+  font-weight: 400;
+  letter-spacing: 0.08em;
   color: var(--color-dark);
   margin-bottom: 24px;
 }
 
 @media (min-width: 768px) {
   .rsvp-title {
-    font-size: 48px;
+    font-size: 52px;
   }
 }
 
@@ -1047,16 +1051,17 @@ a {
 }
 
 .contacts-title {
-  font-family: var(--font-serif);
-  font-size: 36px;
-  letter-spacing: 0.15em;
+  font-family: var(--font-sans);
+  font-size: 38px;
+  font-weight: 400;
+  letter-spacing: 0.08em;
   color: var(--color-dark);
   margin-bottom: 64px;
 }
 
 @media (min-width: 768px) {
   .contacts-title {
-    font-size: 48px;
+    font-size: 52px;
   }
 }
 
