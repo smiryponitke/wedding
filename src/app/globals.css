@@ -582,8 +582,9 @@ a {
 }
 
 .location-image {
-  flex: 1.4;
+  flex: 1;
   width: 100%;
+  max-width: 520px;
 }
 
 .location-image-inner {
@@ -595,13 +596,13 @@ a {
 .location-image-inner img {
   width: 100%;
   height: auto;
-  min-height: 400px;
+  min-height: 280px;
   object-fit: cover;
 }
 
 @media (min-width: 768px) {
   .location-image-inner img {
-    min-height: 640px;
+    min-height: 420px;
   }
 }
 
